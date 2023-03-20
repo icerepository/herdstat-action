@@ -22,5 +22,5 @@ echo "Downloading herdstat CLI from URL '${HERDSTAT_CLI_URL}'"
 curl -sL "${HERDSTAT_CLI_URL}" | tar -xz
 
 # Invoke herdstat with configuration read from file
-echo "Invoking herdstat CLI with configuration read from '.herdstat.yaml'"
+echo "Invoking herdstat CLI with configuration read from '.${GITHUB_JOB}.yaml'"
 ./herdstat -c .${GITHUB_JOB}.yaml contribution-graph
